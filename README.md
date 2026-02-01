@@ -13,17 +13,17 @@
 <br>
 ## Технологии <br>
 <br>
-<pre>| Технология      | Версия/Назначение            | </pre>pre><br>
-<pre>| Spring Boot     | 3.x — основной фреймворк     | </pre>pre><br>
-<pre>| Spring Security | Аутентификация и авторизация | </pre>pre><br>
-<pre>| JWT             | Токены для аутентификации    | </pre>pre><br>
-<pre>| JPA/Hibernate   | ORM для работы с БД          | </pre>pre><br>
-<pre>| PostgreSQL      | Реляционная база данных      | </pre>pre><br>
-<pre>| pgcrypto        | Шифрование номеров карт      | </pre>pre><br>
-<pre>| Validation      | Валидация входных данных     | </pre>pre><br>
-<pre>| Swagger/OpenAPI | Документация API             | </pre>pre><br>
-<pre>| BCrypt          | Хеширование паролей          | </pre>pre><br>
-<pre>| Liquibase       | Миграции базы данных         | </pre>pre><br>
+<pre>| Технология      | Версия/Назначение            | </pre><br>
+<pre>| Spring Boot     | 3.x — основной фреймворк     | </pre><br>
+<pre>| Spring Security | Аутентификация и авторизация | </pre><br>
+<pre>| JWT             | Токены для аутентификации    | </pre><br>
+<pre>| JPA/Hibernate   | ORM для работы с БД          | </pre><br>
+<pre>| PostgreSQL      | Реляционная база данных      | </pre><br>
+<pre>| pgcrypto        | Шифрование номеров карт      | </pre><br>
+<pre>| Validation      | Валидация входных данных     | </pre><br>
+<pre>| Swagger/OpenAPI | Документация API             | </pre><br>
+<pre>| BCrypt          | Хеширование паролей          | </pre><br>
+<pre>| Liquibase       | Миграции базы данных         | </pre><br>
 <br>
 ## Установка и запуск <br>
 <br>
