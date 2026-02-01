@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:bank_db}
+    username: user
+    password: pass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show-sql: true
+  liquibase:
+    change-log: classpath:/db/changelog/changelog.xml
+
+app:
+  jwt-secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  jwt-expiration-milliseconds: 86400000 # 24h
+
+encryption:
+  secret: my-encryption-secret-key
+
+logging:
+  level:
+    liquibase: INFO
