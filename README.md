@@ -13,29 +13,17 @@
 <br>
 ## Технологии <br>
 <br>
-| Технология      | Версия/Назначение            | <br>
-| Spring Boot     | 3.x — основной фреймворк     | <br>
-| Spring Security | Аутентификация и авторизация | <br>
-| JWT             | Токены для аутентификации    | <br>
-| JPA/Hibernate   | ORM для работы с БД          | <br>
-| PostgreSQL      | Реляционная база данных      | <br>
-| pgcrypto        | Шифрование номеров карт      | <br>
-| Validation      | Валидация входных данных     | <br>
-| Swagger/OpenAPI | Документация API             | <br>
-| BCrypt          | Хеширование паролей          | <br>
-| Liquibase       | Миграции базы данных         | <br>
-| Технология | Версия/Назначение |
-|------------|-------------------|
-| Spring Boot | 3.x — основной фреймворк |
-| Spring Security | Аутентификация и авторизация |
-| JWT | Токены для аутентификации |
-| JPA/Hibernate | ORM для работы с БД |
-| PostgreSQL | Реляционная база данных |
-| pgcrypto | Шифрование номеров карт |
-| Validation | Валидация входных данных |
-| Swagger/OpenAPI | Документация API |
-| BCrypt | Хеширование паролей |
-| Liquibase | Миграции базы данных |
+<pre>| Технология      | Версия/Назначение            | </pre>pre><br>
+<pre>| Spring Boot     | 3.x — основной фреймворк     | </pre>pre><br>
+<pre>| Spring Security | Аутентификация и авторизация | </pre>pre><br>
+<pre>| JWT             | Токены для аутентификации    | </pre>pre><br>
+<pre>| JPA/Hibernate   | ORM для работы с БД          | </pre>pre><br>
+<pre>| PostgreSQL      | Реляционная база данных      | </pre>pre><br>
+<pre>| pgcrypto        | Шифрование номеров карт      | </pre>pre><br>
+<pre>| Validation      | Валидация входных данных     | </pre>pre><br>
+<pre>| Swagger/OpenAPI | Документация API             | </pre>pre><br>
+<pre>| BCrypt          | Хеширование паролей          | </pre>pre><br>
+<pre>| Liquibase       | Миграции базы данных         | </pre>pre><br>
 <br>
 ## Установка и запуск <br>
 <br>
