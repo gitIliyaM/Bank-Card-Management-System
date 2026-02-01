@@ -1,32 +1,32 @@
-Описание проекта
-Это RESTful API для управления банковскими картами с поддержкой:
-Регистрации и аутентификации пользователей (JWT)
-Создания, просмотра, редактирования и удаления карт
-Переводов между картами
-Фильтрации и пагинации
-Административных операций
-Шифрования номеров карт в базе данных (PostgreSQL pgcrypto)
+РћРїРёСЃР°РЅРёРµ РїСЂРѕРµРєС‚Р°
+Р­С‚Рѕ RESTful API РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ Р±Р°РЅРєРѕРІСЃРєРёРјРё РєР°СЂС‚Р°РјРё СЃ РїРѕРґРґРµСЂР¶РєРѕР№:
+Р РµРіРёСЃС‚СЂР°С†РёРё Рё Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ (JWT)
+РЎРѕР·РґР°РЅРёСЏ, РїСЂРѕСЃРјРѕС‚СЂР°, СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Рё СѓРґР°Р»РµРЅРёСЏ РєР°СЂС‚
+РџРµСЂРµРІРѕРґРѕРІ РјРµР¶РґСѓ РєР°СЂС‚Р°РјРё
+Р¤РёР»СЊС‚СЂР°С†РёРё Рё РїР°РіРёРЅР°С†РёРё
+РђРґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅС‹С… РѕРїРµСЂР°С†РёР№
+РЁРёС„СЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂРѕРІ РєР°СЂС‚ РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С… (PostgreSQL pgcrypto)
 
-Технологии
-Версия/Назначение
-Spring Boot 3.x — основной фреймворк
-Spring Security Аутентификация и авторизация
-JWT Токены для аутентификации
-JPA/Hibernate ORM для работы с БД
-PostgreSQL Реляционная база данных
-pgcrypto Шифрование номеров карт
-Validation Валидация входных данных
-Swagger/OpenAPI Документация API
-BCrypt Хеширование паролей
+РўРµС…РЅРѕР»РѕРіРёРё
+Р’РµСЂСЃРёСЏ/РќР°Р·РЅР°С‡РµРЅРёРµ
+Spring Boot 3.x вЂ” РѕСЃРЅРѕРІРЅРѕР№ С„СЂРµР№РјРІРѕСЂРє
+Spring Security РђСѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ Рё Р°РІС‚РѕСЂРёР·Р°С†РёСЏ
+JWT РўРѕРєРµРЅС‹ РґР»СЏ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
+JPA/Hibernate ORM РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р‘Р”
+PostgreSQL Р РµР»СЏС†РёРѕРЅРЅР°СЏ Р±Р°Р·Р° РґР°РЅРЅС‹С…
+pgcrypto РЁРёС„СЂРѕРІР°РЅРёРµ РЅРѕРјРµСЂРѕРІ РєР°СЂС‚
+Validation Р’Р°Р»РёРґР°С†РёСЏ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…
+Swagger/OpenAPI Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ API
+BCrypt РҐРµС€РёСЂРѕРІР°РЅРёРµ РїР°СЂРѕР»РµР№
 
-Установка и запуск 
-Требования
+РЈСЃС‚Р°РЅРѕРІРєР° Рё Р·Р°РїСѓСЃРє 
+РўСЂРµР±РѕРІР°РЅРёСЏ
 Java 17+
 PostgreSQL 14+
 Maven
-Настройка базы данных
+РќР°СЃС‚СЂРѕР№РєР° Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 
-Конфигурация application.yml
+РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ application.yml
 server:
 port: 8081
 
@@ -58,43 +58,43 @@ logging:
 level:
 liquibase: INFO
 
-Аутентификация
-API использует JWT (JSON Web Token) для аутентификации.
-Получение токена
-После успешной аутентификации сервер возвращает JWT токен, который нужно добавлять в заголовок всех последующих запросов:
+РђСѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ
+API РёСЃРїРѕР»СЊР·СѓРµС‚ JWT (JSON Web Token) РґР»СЏ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё.
+РџРѕР»СѓС‡РµРЅРёРµ С‚РѕРєРµРЅР°
+РџРѕСЃР»Рµ СѓСЃРїРµС€РЅРѕР№ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё СЃРµСЂРІРµСЂ РІРѕР·РІСЂР°С‰Р°РµС‚ JWT С‚РѕРєРµРЅ, РєРѕС‚РѕСЂС‹Р№ РЅСѓР¶РЅРѕ РґРѕР±Р°РІР»СЏС‚СЊ РІ Р·Р°РіРѕР»РѕРІРѕРє РІСЃРµС… РїРѕСЃР»РµРґСѓСЋС‰РёС… Р·Р°РїСЂРѕСЃРѕРІ:
 http Authorization: Bearer <token>
 
-API Документация
+API Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ
 ? Auth Controller
-Базовый путь: /api/auth
-1. Регистрация нового пользователя
+Р‘Р°Р·РѕРІС‹Р№ РїСѓС‚СЊ: /api/auth
+1. Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
    POST /api/auth/register
-   Запрос: json
+   Р—Р°РїСЂРѕСЃ: json
    {
    "username": "john_doe",
    "password": "secure123",
    "role": "ROLE_USER"
    }
-   Ответ (201 Created): json
+   РћС‚РІРµС‚ (201 Created): json
    {
    "id": 1,
    "username": "john_doe",
    "role": "ROLE_USER"
    }
-2. Аутентификация и получение токена
+2. РђСѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ Рё РїРѕР»СѓС‡РµРЅРёРµ С‚РѕРєРµРЅР°
    POST /api/auth/login
-   Запрос: json
+   Р—Р°РїСЂРѕСЃ: json
    {
    "username": "john_doe",
    "password": "secure123"
    }
-   Ответ (200 OK): eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZSIsInVzZXJJZCI6MSwiaWF0IjoxNzA1MDAwMDAwLCJleHAiOjE3MDUwODY0MDB9...
+   РћС‚РІРµС‚ (200 OK): eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZSIsInVzZXJJZCI6MSwiaWF0IjoxNzA1MDAwMDAwLCJleHAiOjE3MDUwODY0MDB9...
 3. ? Card Controller
-   Базовый путь: /api/cards
-   Требуется аутентификация
-3.1 Получение карт пользователя с пагинацией
+   Р‘Р°Р·РѕРІС‹Р№ РїСѓС‚СЊ: /api/cards
+   РўСЂРµР±СѓРµС‚СЃСЏ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ
+3.1 РџРѕР»СѓС‡РµРЅРёРµ РєР°СЂС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ СЃ РїР°РіРёРЅР°С†РёРµР№
    GET /api/cards?page=0&size=10&sort=id,asc
-   Ответ (200 OK): json
+   РћС‚РІРµС‚ (200 OK): json
    {
    "content": [
    {
@@ -131,9 +131,9 @@ API Документация
    "size": 10,
    "number": 0
    }
-3.2 Получение всех карт пользователя (без пагинации)
+3.2 РџРѕР»СѓС‡РµРЅРёРµ РІСЃРµС… РєР°СЂС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р±РµР· РїР°РіРёРЅР°С†РёРё)
    GET /api/cards/all
-   Ответ (200 OK): json
+   РћС‚РІРµС‚ (200 OK): json
    [
    {
    "id": 1,
@@ -152,10 +152,10 @@ API Документация
    "balance": 500.5
    }
    ]
-3.3 Получение карты по ID
+3.3 РџРѕР»СѓС‡РµРЅРёРµ РєР°СЂС‚С‹ РїРѕ ID
    GET /api/cards/{id}
-   Пример: /api/cards/1
-   Ответ (200 OK): json
+   РџСЂРёРјРµСЂ: /api/cards/1
+   РћС‚РІРµС‚ (200 OK): json
    {
    "id": 1,
    "maskedCardNumber": "**** **** **** 4242",
@@ -164,16 +164,16 @@ API Документация
    "status": "ACTIVE",
    "balance": 1000.0
    }
-3.4 Создание новой карты
+3.4 РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕР№ РєР°СЂС‚С‹
    POST /api/cards
-   Запрос: json
+   Р—Р°РїСЂРѕСЃ: json
    {
    "cardNumber": "4242424242424242",
    "holderName": "John Doe",
    "expiryDate": "2025-12-31",
    "balance": 1000.0
    }
-   Ответ (200 OK): json
+   РћС‚РІРµС‚ (200 OK): json
    {
    "id": 1,
    "maskedCardNumber": "**** **** **** 4242",
@@ -182,12 +182,12 @@ API Документация
    "status": "ACTIVE",
    "balance": 1000.0
    }
-3.5 Обновление статуса карты
+3.5 РћР±РЅРѕРІР»РµРЅРёРµ СЃС‚Р°С‚СѓСЃР° РєР°СЂС‚С‹
     PATCH /api/cards/{id}/status?status=BLOCKED
-    Параметры:
-    status — ACTIVE, BLOCKED, EXPIRED
-    Пример: /api/cards/1/status?status=BLOCKED
-    Ответ (200 OK): json
+    РџР°СЂР°РјРµС‚СЂС‹:
+    status вЂ” ACTIVE, BLOCKED, EXPIRED
+    РџСЂРёРјРµСЂ: /api/cards/1/status?status=BLOCKED
+    РћС‚РІРµС‚ (200 OK): json
     {
     "id": 1,
     "maskedCardNumber": "**** **** **** 4242",
@@ -196,24 +196,24 @@ API Документация
     "status": "BLOCKED",
     "balance": 1000.0
     }
-3.6 Удаление карты
+3.6 РЈРґР°Р»РµРЅРёРµ РєР°СЂС‚С‹
    DELETE /api/cards/{id}
-   Пример: /api/cards/1
-   Ответ (204 No Content):
-   Пустое тело ответа
+   РџСЂРёРјРµСЂ: /api/cards/1
+   РћС‚РІРµС‚ (204 No Content):
+   РџСѓСЃС‚РѕРµ С‚РµР»Рѕ РѕС‚РІРµС‚Р°
    Curl: 
    curl -X DELETE http://localhost:8080/api/cards/1 \
    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..."
-3.7 Перевод между картами пользователя
+3.7 РџРµСЂРµРІРѕРґ РјРµР¶РґСѓ РєР°СЂС‚Р°РјРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
    POST /api/cards/transfer
-   Запрос: json
+   Р—Р°РїСЂРѕСЃ: json
    {
    "sourceCardId": 1,
    "destinationCardId": 2,
    "amount": 100.5
    }
-   Ответ (204 No Content):
-   Пустое тело ответа
+   РћС‚РІРµС‚ (204 No Content):
+   РџСѓСЃС‚РѕРµ С‚РµР»Рѕ РѕС‚РІРµС‚Р°
    Curl:
    curl -X POST http://localhost:8080/api/cards/transfer \
    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..." \
@@ -223,18 +223,18 @@ API Документация
    "destinationCardId": 2,
    "amount": 100.5
    }'
-3.8 Фильтрация карт пользователя
+3.8 Р¤РёР»СЊС‚СЂР°С†РёСЏ РєР°СЂС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
    GET /api/cards/filter
-   Параметры (все опциональные):
-   status — ACTIVE, BLOCKED, EXPIRED
-   expiryDateFrom — дата в формате YYYY-MM-DD
-   expiryDateTo — дата в формате YYYY-MM-DD
-   minBalance — минимальный баланс
-   maxBalance — максимальный баланс
-   page, size, sort — параметры пагинации
-   Пример:
+   РџР°СЂР°РјРµС‚СЂС‹ (РІСЃРµ РѕРїС†РёРѕРЅР°Р»СЊРЅС‹Рµ):
+   status вЂ” ACTIVE, BLOCKED, EXPIRED
+   expiryDateFrom вЂ” РґР°С‚Р° РІ С„РѕСЂРјР°С‚Рµ YYYY-MM-DD
+   expiryDateTo вЂ” РґР°С‚Р° РІ С„РѕСЂРјР°С‚Рµ YYYY-MM-DD
+   minBalance вЂ” РјРёРЅРёРјР°Р»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ
+   maxBalance вЂ” РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ
+   page, size, sort вЂ” РїР°СЂР°РјРµС‚СЂС‹ РїР°РіРёРЅР°С†РёРё
+   РџСЂРёРјРµСЂ:
    /api/cards/filter?status=ACTIVE&minBalance=500&page=0&size=10
-   Ответ (200 OK): json
+   РћС‚РІРµС‚ (200 OK): json
    {
    "content": [
    {
@@ -258,11 +258,11 @@ API Документация
    curl -X GET "http://localhost:8080/api/cards/filter?status=ACTIVE&minBalance=500&page=0&size=10" \
    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..."
 4. ??? Admin Controller
-   Базовый путь: /api/admin
-   Требуется роль: ROLE_ADMIN
-4.1 Получение всех карт в системе
+   Р‘Р°Р·РѕРІС‹Р№ РїСѓС‚СЊ: /api/admin
+   РўСЂРµР±СѓРµС‚СЃСЏ СЂРѕР»СЊ: ROLE_ADMIN
+4.1 РџРѕР»СѓС‡РµРЅРёРµ РІСЃРµС… РєР°СЂС‚ РІ СЃРёСЃС‚РµРјРµ
    GET /api/admin/cards
-   Ответ (200 OK): json
+   РћС‚РІРµС‚ (200 OK): json
    [
    {
    "id": 1,
@@ -284,16 +284,16 @@ API Документация
    Curl:
    curl -X GET http://localhost:8080/api/admin/cards \
    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..."
-4.2 Создание карты для любого пользователя
+4.2 РЎРѕР·РґР°РЅРёРµ РєР°СЂС‚С‹ РґР»СЏ Р»СЋР±РѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
    POST /api/admin/cards?username=john_doe
-   Запрос: json
+   Р—Р°РїСЂРѕСЃ: json
    {
    "cardNumber": "4242424242424242",
    "holderName": "John Doe",
    "expiryDate": "2025-12-31",
    "balance": 1000.0
    }
-   Ответ (201 Created): json
+   РћС‚РІРµС‚ (201 Created): json
    {
    "id": 1,
    "maskedCardNumber": "**** **** **** 4242",
@@ -302,10 +302,10 @@ API Документация
    "status": "ACTIVE",
    "balance": 1000.0
    }
-4.3 Обновление статуса любой карты
+4.3 РћР±РЅРѕРІР»РµРЅРёРµ СЃС‚Р°С‚СѓСЃР° Р»СЋР±РѕР№ РєР°СЂС‚С‹
    PATCH /api/admin/cards/{id}/status?status=BLOCKED
-   Пример: /api/admin/cards/1/status?status=BLOCKED
-   Ответ (200 OK): json
+   РџСЂРёРјРµСЂ: /api/admin/cards/1/status?status=BLOCKED
+   РћС‚РІРµС‚ (200 OK): json
    {
    "id": 1,
    "maskedCardNumber": "**** **** **** 4242",
@@ -314,49 +314,49 @@ API Документация
    "status": "BLOCKED",
    "balance": 1000.0
    }
-4.4 Удаление любой карты
+4.4 РЈРґР°Р»РµРЅРёРµ Р»СЋР±РѕР№ РєР°СЂС‚С‹
    DELETE /api/admin/cards/{id}
-   Пример: /api/admin/cards/1
-   Ответ (204 No Content):
-   Пустое тело ответа
+   РџСЂРёРјРµСЂ: /api/admin/cards/1
+   РћС‚РІРµС‚ (204 No Content):
+   РџСѓСЃС‚РѕРµ С‚РµР»Рѕ РѕС‚РІРµС‚Р°
    Curl:
    curl -X DELETE http://localhost:8080/api/admin/cards/1 \
    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..."
-4.5 Создание нового пользователя (админ)
+4.5 РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р°РґРјРёРЅ)
    POST /api/admin/users
-   Запрос: json
+   Р—Р°РїСЂРѕСЃ: json
    {
    "username": "new_user",
    "password": "password123",
    "role": "ROLE_USER"
    }
-   Ответ (201 Created): json
+   РћС‚РІРµС‚ (201 Created): json
    {
    "id": 3,
    "username": "new_user",
    "password": "$2a$10$...",
    "role": "ROLE_USER"
    }
-4.6 Удаление пользователя
+4.6 РЈРґР°Р»РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
    DELETE /api/admin/users/{id}
-   Пример: /api/admin/users/3
-   Ответ (204 No Content):
-   Пустое тело ответа
+   РџСЂРёРјРµСЂ: /api/admin/users/3
+   РћС‚РІРµС‚ (204 No Content):
+   РџСѓСЃС‚РѕРµ С‚РµР»Рѕ РѕС‚РІРµС‚Р°
    Curl:
    curl -X DELETE http://localhost:8080/api/admin/users/3 \
    -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9..."
-4.7 Фильтрация всех карт (админ)
+4.7 Р¤РёР»СЊС‚СЂР°С†РёСЏ РІСЃРµС… РєР°СЂС‚ (Р°РґРјРёРЅ)
    GET /api/admin/cards/filter
-   Параметры (все опциональные):
-   status — ACTIVE, BLOCKED, EXPIRED
-   expiryDateFrom — дата в формате YYYY-MM-DD
-   expiryDateTo — дата в формате YYYY-MM-DD
-   minBalance — минимальный баланс
-   maxBalance — максимальный баланс
-   page, size, sort — параметры пагинации
-   Пример:
+   РџР°СЂР°РјРµС‚СЂС‹ (РІСЃРµ РѕРїС†РёРѕРЅР°Р»СЊРЅС‹Рµ):
+   status вЂ” ACTIVE, BLOCKED, EXPIRED
+   expiryDateFrom вЂ” РґР°С‚Р° РІ С„РѕСЂРјР°С‚Рµ YYYY-MM-DD
+   expiryDateTo вЂ” РґР°С‚Р° РІ С„РѕСЂРјР°С‚Рµ YYYY-MM-DD
+   minBalance вЂ” РјРёРЅРёРјР°Р»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ
+   maxBalance вЂ” РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ Р±Р°Р»Р°РЅСЃ
+   page, size, sort вЂ” РїР°СЂР°РјРµС‚СЂС‹ РїР°РіРёРЅР°С†РёРё
+   РџСЂРёРјРµСЂ:
    /api/admin/cards/filter?status=ACTIVE&minBalance=1000&page=0&size=10
-   Ответ (200 OK): json
+   РћС‚РІРµС‚ (200 OK): json
    {
    "content": [
    {
@@ -384,25 +384,25 @@ API Документация
    "size": 10,
    "number": 0
    }
-5. Обработка ошибок
-   Формат ошибок валидации
+5. РћР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РѕРє
+   Р¤РѕСЂРјР°С‚ РѕС€РёР±РѕРє РІР°Р»РёРґР°С†РёРё
    400 Bad Request: json
    {
-   "cardNumber": "Номер карты должен состоять из 16 цифр",
-   "holderName": "Имя владельца не может быть пустым"
+   "cardNumber": "РќРѕРјРµСЂ РєР°СЂС‚С‹ РґРѕР»Р¶РµРЅ СЃРѕСЃС‚РѕСЏС‚СЊ РёР· 16 С†РёС„СЂ",
+   "holderName": "РРјСЏ РІР»Р°РґРµР»СЊС†Р° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚С‹Рј"
    }
-   Общие ошибки   
-   Сообщение                                        | HTTP Код | Ошибка
-   Недостаточно средств для перевода                     400     InsufficientFundsException
-   Обе карты должны быть активны для перевода            400     InvalidCardOperationException
+   РћР±С‰РёРµ РѕС€РёР±РєРё   
+   РЎРѕРѕР±С‰РµРЅРёРµ                                        | HTTP РљРѕРґ | РћС€РёР±РєР°
+   РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃСЂРµРґСЃС‚РІ РґР»СЏ РїРµСЂРµРІРѕРґР°                     400     InsufficientFundsException
+   РћР±Рµ РєР°СЂС‚С‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р°РєС‚РёРІРЅС‹ РґР»СЏ РїРµСЂРµРІРѕРґР°            400     InvalidCardOperationException
    User with this username already exists                400     UserAlreadyExistsException
-   Номер карты уже существует                            400     CardNumberAlreadyExistsException
+   РќРѕРјРµСЂ РєР°СЂС‚С‹ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚                            400     CardNumberAlreadyExistsException
    Invalid username or password                          401     BadCredentialsException
    Access denied                                         403     AccessDeniedException
-   Карта с идентификатором не найдена: 1                 404     CardNotFoundException
+   РљР°СЂС‚Р° СЃ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј РЅРµ РЅР°Р№РґРµРЅР°: 1                 404     CardNotFoundException
    User with username john_doe not found                 404     UserNotFoundException
    Internal server error: ...                            500     Exception
 6. Swagger UI
-   Документация API доступна через Swagger UI:
+   Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ API РґРѕСЃС‚СѓРїРЅР° С‡РµСЂРµР· Swagger UI:
    URL: http://localhost:8080/swagger-ui.html
    
