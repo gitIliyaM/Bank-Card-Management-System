@@ -67,7 +67,7 @@ http Authorization: Bearer <token>
 API Документация
 ? Auth Controller
 Базовый путь: /api/auth
-1. Регистрация нового пользователя
+1. Регистрация нового пользователя<br>
    POST /api/auth/register
    Запрос: json
    {
