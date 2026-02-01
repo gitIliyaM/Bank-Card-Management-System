@@ -497,17 +497,16 @@ eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huX2RvZSIsInVzZXJJZCI6MSwiaWF0IjoxNzA1MDAwMDA
 <br>
 ### Общие ошибки <br>
 <br>
-| Сообщение | HTTP Код | Ошибка | <br>
-|-----------|----------|--------| <br>
-| Недостаточно средств для перевода | 400 | `InsufficientFundsException` | <br>
-| Обе карты должны быть активны для перевода | 400 | `InvalidCardOperationException` | <br>
-| User with this username already exists | 400 | `UserAlreadyExistsException` | <br>
-| Номер карты уже существует | 400 | `CardNumberExistsException` | <br>
-| Invalid username or password | 401 | `BadCredentialsException` | <br>
-| Access denied | 403 | `AccessDeniedException` | <br>
-| Карта с идентификатором не найдена: 1 | 404 | `CardNotFoundException` | <br>
-| User with username john_doe not found | 404 | `UserNotFoundException` | <br>
-| Internal server error | 500 | `Exception` | <br>
+<pre>| Сообщение                                  | HTTP Код |           Ошибка                | </pre><br>
+<pre>| Недостаточно средств для перевода          |    400   | `InsufficientFundsException`    | </pre><br>
+<pre>| Обе карты должны быть активны для перевода |    400   | `InvalidCardOperationException` | </pre><br>
+<pre>| User with this username already exists     |    400   | `UserAlreadyExistsException`    | </pre><br>
+<pre>| Номер карты уже существует                 |    400   | `CardNumberExistsException`     | </pre><br>
+<pre>| Invalid username or password               |    401   |  BadCredentialsException`       | </pre><br>
+<pre>| Access denied                              |    403   | `AccessDeniedException`         | </pre><br>
+<pre>| Карта с идентификатором не найдена: 1      |    404   | `CardNotFoundException`         | </pre><br>
+<pre>| User with username john_doe not found      |    404   | `UserNotFoundException`         | </pre><br>
+<pre>| Internal server error                      |    500   | `Exception`                     | </pre><br>
 <br>
 ## Swagger UI <br>
 <br>
